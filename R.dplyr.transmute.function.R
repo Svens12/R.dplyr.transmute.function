@@ -1,0 +1,9 @@
+library(dplyr)
+mydata<-read.csv('murders.csv')
+names(mydata)
+mysubdata<-transmute(mydata,ratio=total/population)
+mysubdata
+names(mysubdata)
+mysubdata<-transmute(mydata,state=state,ratio=total/population)
+names(mysubdata)
+mysubdata
